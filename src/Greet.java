@@ -13,7 +13,6 @@ class Person extends Thread{
         System.out.println("Hello " + name);
 
         synchronized (this) {
-            System.out.println("\n" + name + " needs " + ticket + " tickets.");
             if(available >= ticket){
                 available = available - ticket;
                 System.out.println("Congratulations " + name + ", you booked " + ticket + " tickets" + "\nAvailable tickets: " + available);
